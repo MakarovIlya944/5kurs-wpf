@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="270.677" Width="673.121">
+    <Grid>
+        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" Height="146" Margin="10,24,0,0" VerticalAlignment="Top" Width="176" AutoGenerateColumns="False" ItemsSource="{Binding Source=Points}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding X}" ClipboardContentBinding="{Binding X}" Width="1*"/>
+                <DataGridTextColumn Binding="{Binding Y}" ClipboardContentBinding="{Binding Y}" Width="1*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <Rectangle x:Name="ArtPanel" Fill="#FFF4F4F5" HorizontalAlignment="Left" 
+                   Height="146" Margin="212,24,0,0" Stroke="Black" VerticalAlignment="Top" Width="227">
+            
+        </Rectangle>
+    </Grid>
+</Window>
