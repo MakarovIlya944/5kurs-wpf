@@ -7,16 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="270.677" Width="673.121">
     <Grid>
-        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" Height="146" Margin="10,24,0,0" VerticalAlignment="Top" Width="176" AutoGenerateColumns="False" ItemsSource="{Binding Source=Points}">
+        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" Height="146" Margin="10,24,0,0" VerticalAlignment="Top" Width="176" AutoGenerateColumns="False" ItemsSource="{Binding Source=Points}" CellEditEnding="Points_CollectionChanged" SelectionChanged="Points_CollectionChanged" SelectedCellsChanged="Points_CollectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding X}" ClipboardContentBinding="{Binding X}" Width="1*"/>
                 <DataGridTextColumn Binding="{Binding Y}" ClipboardContentBinding="{Binding Y}" Width="1*"/>
             </DataGrid.Columns>
         </DataGrid>
-        
-        <Rectangle x:Name="ArtPanel" Fill="#FFF4F4F5" HorizontalAlignment="Left" 
-                   Height="146" Margin="212,24,0,0" Stroke="Black" VerticalAlignment="Top" Width="227">
-            
-        </Rectangle>
+        <Grid x:Name="ArtGrid" HorizontalAlignment="Left" Height="161" Margin="202,24,0,0" VerticalAlignment="Top" Width="301"/>
     </Grid>
 </Window>
