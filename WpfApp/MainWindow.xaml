@@ -7,12 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="270.677" Width="673.121">
     <Grid>
-        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" Height="146" Margin="10,24,0,0" VerticalAlignment="Top" Width="176" AutoGenerateColumns="False" ItemsSource="{Binding Source=Points}" CellEditEnding="Points_CollectionChanged" SelectionChanged="Points_CollectionChanged" SelectedCellsChanged="Points_CollectionChanged">
+        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" Height="146" Margin="479,24,0,0" VerticalAlignment="Top" Width="176" AutoGenerateColumns="False" ItemsSource="{Binding Source=Points}" CellEditEnding="Points_CollectionChanged" SelectionChanged="Points_CollectionChanged" SelectedCellsChanged="Points_CollectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding X}" ClipboardContentBinding="{Binding X}" Width="1*"/>
                 <DataGridTextColumn Binding="{Binding Y}" ClipboardContentBinding="{Binding Y}" Width="1*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid x:Name="ArtGrid" HorizontalAlignment="Left" Height="161" Margin="202,24,0,0" VerticalAlignment="Top" Width="301"/>
+        <Menu Margin="0,0,508,207" >
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть" Click="OpenFile" />
+                <MenuItem Header="Сохранить" Click="SaveFile" />
+                <MenuItem Header="Удалить" Click="RemoveFile" />
+            </MenuItem>
+        </Menu>
+        <Grid x:Name="ArtGrid" HorizontalAlignment="Left" Height="161" Margin="154,24,0,0" VerticalAlignment="Top" Width="301"/>
+        <Label x:Name="label1" Content="Table" HorizontalAlignment="Left" Margin="433,208,0,0" VerticalAlignment="Top" Width="73" Height="22"/>
+        <ComboBox x:Name="comboBoxTable" SelectedItem="1" SelectionChanged="SelectionChanged"  HorizontalAlignment="Left" Margin="535,208,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
